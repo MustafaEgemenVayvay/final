@@ -85,22 +85,12 @@ survey %>%
 # Yöntem ve Veri Analizi
 
 
-
-```{r plot, fig.align='center', fig.cap='2008-2009 Yılı karşılaştırması',echo=FALSE}
-survey %>% 
-  ggplot(aes(x = ikibinsekiz, y = ikibindokuz)) +
-  geom_point() +
-  geom_smooth() +
-  scale_x_continuous("ikibinsekiz") + 
-  scale_y_continuous("ikibindokuz")
-```
-
-```{r,fig.align='center', fig.cap='2008-2010 Yılı karşılaştırması',echo=FALSE}
-ggplot(survey, aes(x=ikibinon, y=ikibinsekiz)) +
+```{r, echo=FALSE}
+ggplot(survey, aes(x=ikibindokuz, y=ikibinsekiz)) +
   geom_line()
 ```
 
-```{r,fig.align='center', fig.cap='2008 Yılı histogram tablosu', echo=FALSE}
+```{r, echo=FALSE}
 survey %>%
   ggplot(aes(x = ikibinsekiz)) +
   geom_histogram(aes(y = ..density..),
@@ -110,37 +100,44 @@ survey %>%
                fill = "#71f653") 
 ```
 
-```{r,fig.align='center', fig.cap='2019-2020 Yılı karşılaştırması', echo=FALSE}
+```{r, echo=FALSE }
+survey %>% 
+  ggplot(aes(x = ikibinondokuz, y = ikibinyirmi)) +
+  geom_point() +
+  geom_smooth() +
+  scale_x_continuous("ikibinondokuz") + 
+  scale_y_continuous("ikibinyirmi")
+```
+
+```{r, echo=FALSE}
 survey %>% 
   select(ikibinondokuz, ikibinyirmi) %>% 
   GGally::ggpairs()
 ```
 
-```{r,fig.align='center', fig.cap='2019 YILI', echo=FALSE}
+```{r, echo=FALSE}
 ggplot(survey) +
   aes(x =ikibinondokuz) +
   geom_histogram()
 ```
 
-```{r,fig.align='center', fig.cap='2020 YILI', echo=FALSE}
+```{r, echo=FALSE}
 ggplot(survey) +
   aes(x =ikibinyirmi) +
   geom_histogram()
 
 ```
 
-```{r,fig.align='center', fig.cap='2021 YILI', echo=FALSE}
+```{r, echo=FALSE}
 ggplot(survey) +
   aes(x =ikibinyirmibir) +
   geom_histogram()
 ```
 
 
-
-
-
 # Sonuç
 
+Bu çalışmamızın sonucunda kullandığımız istatistiksel yöntemlerin desteği ile görmüş olduk ki Türkiye'de boşanma sayıları, bazı yıllarda yaşanılan önemli toplumsal olaylardan etkilenmektedir. 2020 Covid-19 salgını başta olmak üzere önemli toplumsal olaylarda boşanma hızları, nüfus artışıyla olan normal artış seyrinin dışına çıkmış ve genelde düşüş eğilimi göstermiştir. 2008 yılında yaşanan ve devamında etkileri hissedilen ekonomik kriz yıllarını incelediğimizde ve 2008-2009 yıllarını karşılaştırdığımızda ise biraz daha hissedilir biçimde boşanma sayılarında artış gözlemlenmiştir. Bu iki sonuca baktığımızda boşanma sayılarının seyrinin farklı yönlerde ilerlemesi, ekonomik krizin getirdiği işsizlik, geçim sıkıntısı gibi problemlerin boşanmalarda çok daha güçlü bir etken olduğu fakat salgın hastalık gibi dönemlerde artmadığı gibi kısıtlanan resmi işler, sokağa çıkma yasakları gibi etkenlerden dolayı yavaşlama göstermiştir. Genel olarak baktığımızda gerek düşme eğilimli gerek artma eğilimli olsun boşanma sayıları görüldüğü üzere yalnızca bireysel olaylardan değil, tüm ulusu etkileyen toplumsal olaylardan da fazlasıyla etkilenmektedir.
 
 \newpage
 # Kaynakça {#references}
