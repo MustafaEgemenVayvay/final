@@ -1,7 +1,7 @@
 ---
-title: "Çalışmanızın Başlığı"
+title: "Türkiye’de Yıllar ve İllere Göre Boşanma Sayılarının Seyri"
 author: 
-  - İsim Soyisim[^1]
+  - Mustafa Egemen Vayvay[^1]
 bibliography: ../bibliography/biblio.bib
 csl: ../csl/apa-tr.csl
 header-includes:
@@ -25,7 +25,7 @@ urlcolor: blue
 fontsize: 12pt
 biblio-style: apalike
 abstract: |
-  Bu bölümde çalışmanızın özetini yazınız.
+  Bu çalışmamızda Türkiye'nin, 2008-2022 yılları arasında il bazlı olarak boşanma sayılarının seyrinin nasıl olduğunu istatistiksel yöntemler kullanarak inceledik. Toplumumuzu etkileyen ve tüm ulusu ilgilendiren olumlu ve olumsuz olayların, bireysel olarak görünen evlilik sayılarına etkilerini analiz ettik. Farklı bölgelerinde farklı kültürlere ev sahipliği yapan Türkiye'nin bölgelerini inceleyerek, boşanma sayılarında bölgelerin, dolaylı yoldan farklı kültürlerin etkisi olup olmadığını ele almayı amaçladık. Ayrıca büyük kentlerimizde daha sık karşılaşılan kalabalık nüfus, geçim sıkıntısı, doğal ortamların sayısının azlığı ve tüm bunların sonucunda insan psikolojisini kötü etkileyen etkenlerin boşanma sayıları üzerindeki etkilerini açıklayabilmeyi amaçladık . Tüm bu amaçlar doğrultusunda TÜİK'in yayınladığı veri setinin yanında istatistiksel yöntem ve grafikleri kullanarak araştırma sorumuza cevap aradık.
 ---
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FALSE)
@@ -34,56 +34,46 @@ knitr::opts_chunk$set(cache = FALSE, echo = TRUE, message = FALSE, warning = FAL
 <!-- ======================================================================= -->
 <!-- ============================== NOTLAR ================================= -->
 <!-- ======================================================================= -->
-[^1]: Öğrenci Numarası, [Github Repo](https://github.com/KULLANICI_ADINIZ/REPO_ADINIZ)
+[^1]: 20080306, [Github Repo](https://github.com/MustafaEgemenVayvay/final)
 
-# Final Hakkında Önemli Bilgiler
 
-\colorbox{BurntOrange}{GITHUB REPO BAĞLANTINIZI BU DOSYANIN 37. SATIRINA YAZINIZ!}
-
-**Proje gönderimi, Github repo linki ile birlikte ekampus sistemine bir zip dosyası yüklenerek yapılacaktır. Sisteme zip dosyası yüklemezseniz ve Github repo linki vermezseniz ara sınav ve final sınavlarına girmemiş sayılırsınız.**
-
-**Proje klasörünüzü sıkıştırdıktan sonra (`OgrenciNumarasi.zip` dosyası) 9 Haziran 2023 23:59'a kadar *ekampus.ankara.edu.tr* adresine yüklemeniz gerekmektedir.**
-
-\colorbox{WildStrawberry}{Daha fazla bilgi için proje klasöründeki README.md dosyasını okuyunuz.}
 
 # Giriş
-Bu taslak size proje ödevinizi yazarken yardımcı olması amacıyla oluşturulmuştur. Ödevlerinizde, makalelerinizde, sunumlarınızda ve projelerinizde kullandığınız tüm bilgi kaynaklarına atıfta bulunmalısınız. Alıntı ve gönderme yapmak okuyuculara çalışmanızda kullandığınız/başvurduğunuz  kaynaklara ulaşma imkanı sağlar. **Her ne kadar kendi sözlerinizi kullanıyor olsanız da, başkalarına ait fikirleri çalışmanızda aktarıyorsanız bu fikirlerin kaynağını belgelemek zorundasınız. Aksi takdirde akademik intihal yapmış olursunuz.** Yazım konusunda @aydinonat:2007'ye başvurabilirsiniz. 
-
-
-Proje ödevinizde yer alan başlıkların bu metinde yer alan başlıkları kesinlikle içermesi gerekmektedir. Burada kullanılan başlıklar haricinde farklı alt başlıklar da kullanabilirsiniz. Projenizi yazarken bu dosyayı taslak olarak kullanıp içeriğini projenize uyarlayınız.
+İnsan, iletişim kurma ve diğer insanlarla etkileşime girme ihtiyacı olan bir varlıktır. İnsanın yalnız yaşaması, doğası gereği hep zorlayıcı olmuştur. Çoğu insanın hayalinde bir yuva kurmak, evlenmek ve hayatını kendi kuracağı bir aile ortamında geçirmek vardır. Fakat en az bu durum kadar gerçek olan bir şey ise evliliğin her zaman için bu hayal kadar sorunsuz ve huzurlu olmayacağıdır. O yüzden her ne kadar görmezden gelmeye, hesaba katmamaya çalışsak bile boşanmak günümüzün önemli bir gerçeğidir. Boşanmalar, insanlar tarafından her zaman kötü bir şey ve olmaması gereken bir durum olarak kabul görmüştür. Fakat bazı durumlarda boşanmak yerine evli kalmak, her iki taraf için daha fazla hasara yol açabilmektedir. İnsan çok yönlü, kolay etkilenebilen ve duyguları olan bir varlıktır. Boşanmak her ne kadar iki insan arasında gibi görünse bile bunun altında yatan toplumsal konular, kişisel ve ulusal ekonominin durumu, kişinin eğitim durumu, insanın yaşadığı çevre, örf ve adetler, kültürel farklılıklar, insanları derinden etkileyen olağandışı olaylar gibi etkenler insanların düşüncelerinde, fikirlerinde ve duygularında ve boşanma kararı vermelerinde rol oynayıcı olabilirler. Bu çalışmamızda TÜİK’in yayınladığı 2022 İLLER BAZINDA BOŞANMALAR adlı veri setini kullanarak son yıllarda Türkiye’de iller bazında boşanma sayılarının yıllara göre nasıl seyir aldığını ve hangi durumlardan etkilenebileceğini gözlemleyip, analiz edeceğiz.
 
 ## Çalışmanın Amacı
-Bu bölümde yaptığınız çalışmanın amacından ve öneminden birkaç paragraf ile bahsediniz.
+2008-2022 yılları arasında Türkiye’de il bazında boşanma sayılarının nasıl bir seyir gösterdiğini, boşanma sayılarındaki artış ve azalışların bölgesel olarak etkilenip etkilenmediğini, yıllar içerisinde yaşanmış ve tüm ülkeyi ilgilendiren önemli olayların boşanma sayılarında nasıl bir etkiye sahip olduğunu, salgın hastalıklar gibi olağan dışı durumların ve ulusal ekonominin gidişatının boşanma sayılarında nasıl bir etkiye yol açtığını gözlemlemek ve boşanma sayılarının nüfus artışıyla olan ilişkisini istatistiksel veriler ile açıklamak amaçlanmaktadır.
 
 ## Literatür 
-
-Bu bölümde konu ile ilgili olarak okuduğunuz makaleleri referans vererek tartışınız. **Her makaleyi ayrı başlık altında tek tek özetlemeyiniz.** Literatür taramasında **en az altı** makaleye atıf yapılması ve bu makalelerden **en az ikisinin İngilizce** olması gerekmektedir.
+ Türkiye, diğer çoğu ülkeye paralel olarak, değişen demografik ve aile yapısıyla boşanmaların artık önemli bir konu haline geldiği bir ülke olmuştur. Ülkemizde boşanmalar yıllar içerisinde değişiklik göstermiştir ve hala göstermektedir. Aile ve onu etkileyen faktörler her ne kadar kısıtlı olarak görünse, aile dediğimiz kurum birkaç insandan oluşan bir grup olsa bile, toplumdan ve ülke çapındaki konulardan sanılandan daha fazla etkilenen bir kurumdur. Türkiye’deki boşanmalar için başlıca sebep geçimsizlik olarak görülmektedir. Bölgesel olarak boşanmalardaki sayılarda değişmelere sahip olan Türkiye’de kent yaşamına geçmek, gelişmişlik düzeyi, eğitim düzeyi, kişisel ekonomik durum gibi etkenler boşanma sayılarını etkileyen diğer etkenlerden sayılabilir.[@yildirim2004turkiye]
+Toplumun aile yapısını etkilediği ve şekillendirdiği gibi aile yapısı ve içinde yaşanan değişikliklerde, toplumu etkileyen faktörlerin başında gelir. Aile içinde sorunlar olan ve bu sayı gitgide artan toplumlarda, ulusal çaplı sorunlar, toplumsal anlayışsızlık ve toplumun büyük bölümünde psikolojik rahatsızlık gibi sorunların sıklığı artar. Toplumsal etkilerin yanı sıra en büyük boşanma sebeplerinden diğerleri; zina, şiddet, alkol kullanımı, hakaret ve sevgisizlik gibi bireysel problemlerden kaynaklanmaktadır ve bu problemlerin dillendirilmesi kentleşmiş alanlarda daha fazla olduğundan dolayı kentsel alanlardaki boşanma sayılarının yüksekliğine ek bir sebep olmaktadır.  Türkiye’de evlenmelerin arttığı gibi boşanmalar da artış göstermektedir ve Türkiye’de boşanmaların 2/5’lik kısmı, evliliğin ilk 5 yılında gerçekleşmektedir. [@demir2013attitudes]
+Türkiye’de yaklaşık son 25 senelik zaman dilimine baktığımızda aile kavramı için en büyük sorunu oluşturan etken boşanmalardır. Türkiye, boşanma olgusu bakımından çok hızlı değişikliklerin yaşandığı ve bölgesel farkların çok fazla olduğu bir ülkedir. İstatistiksel verilere baktığımızda, boşanma sayılarının en fazla olduğu bölge, Ege bölgesi olarak karşımıza çıkarken, en az boşanma sayılarına sahip bölgelerin Doğu Anadolu ve Güneydoğu Anadolu oldukları gözlemlenmektedir. Çiftler arasında bir sorun olmamasına rağmen görücü usulü evliliklerin olduğu bölgelerde birbirlerini yeteri kadar tanıyamamış çiftlerin evliliğin ilerleyen zamanlarında ilişkilerine son verdikleri görülmektedir. Kentleşmenin ve eğitim durumunun etkisinin fazla olduğu boşanma sayılarında zirvede en büyük şehirlerimizden olan İstanbul, Ankara ve İzmir gelmektedir. Boşanmış kişilere en az rastlanan bölgelerimiz ise Kuzeydoğu Anadolu, Doğu Karadeniz, Güneydoğu Anadolu ve Ortadoğu Anadolu gibi genel olarak doğu bölgemizdir.[@bacskaya2017turkiye] 
+Türkiye, diğer gelişmiş ülkelere ve batılı devletlere oranla demografik ve aile yapısı iyi belgelenmiş bir ülke değildir. Hala geleneksel aile yapısının benimsendiği kabul edilen Türkiye’de son yıllarda aile yapısı önemli ölçüde değişmiştir. Evliliğin daha ileri yaşlarda yapıldığı ve boşanmalarda artış olduğu görülmektedir. 2001 yılında Türk Medeni Kanunu’nda yapılan değişiklikler sonucu kadınlara verilen hakların genişlemesi boşanma sayılarını etkileyen bir etken olmuştur. Türkiye, pek rastlanılmayan bir şekilde ülke içinde bölgesel olarak ekonomik ve gelişmişlik düzeyinin çok farklı olabildiği bir ülkedir. Kadınların çalışma hayatına daha fazla katıldığı, ekonomik özgürlüklerinin daha fazla olduğu ve kentleşmenin fazla olduğu Türkiye’nin batı bölgesinde, boşanma sayılarında bir artış yaşanırken, Türkiye’nin doğu bölgesinde ise kadın çalışma oranlarının düşük ve ekonomik özgürlüklerinin az olması eşine daha bağımlı hale gelmesine yol açarak boşanma konusunda daha cesur olamamasına ve doğal olarak boşanma sayılarının batıya oranla düşük olmasına sebep vermektedir. [@caarls2015regional]
 
 # Veri 
-Bu bölümde çalışmanızda kullandığınız veri setinin kaynağını, ham veri üzerinde herhangi bir işlem yaptıysanız bu işlemleri ve veri seti ile ilgili özet istatistikleri tartışınız. Bu bölümde tüm değişkenlere ait özet istatistikleri (ortalama, standart sapma, minimum, maksimum, vb. değerleri) içeren bir tablo (Tablo \ref{tab:ozet}) olması zorunludur. Tablolarınıza gerekli göndermeleri bir önceki cümlede gösterildiği gibi yapınız. [@perkins:1991]
+Bu çalışmamızda veri seti olarak TÜİK'in yayınlamış olduğu 2022 İLLER BAZINDA BOŞANMALAR adlı veri seti kullanılmıştır. 2001-2022 yılları arasını kapsayan veri setimizden, günümüze ve önemli olaylara daha yakın olması ve daha doğru analiz yapılabilmesi amacıyla 2001-2007 arası çıkartılmış ve veri setimiz, 2008-2022 yılları arasını kapsar hale getirilmiştir. Veri setimizin sütunlarında yıllar varken satırlarında Türkiye toplamı başta olmak üzere diğer illerimiz yer almaktadır. Gerekli istatistiksel yöntem kullanıldıktan sonra ortaya çıkan Tablo1'e baktığımızda maksimum değerlerin hep Türkiye toplamı olarak, minimum değerlerin ise, boşanma sayılarının en az olduğu ilimiz Hakkari'de ortaya çıktığını görmekteyiz. Ortalamaları incelediğimizde 2008 yılının ortalaması 2430 olurken, 2022 yılının ortalaması 4413'dür ve yıllar geçtikçe ortamalar bir yıl öncekine göre genelde artmıştır. Fakat 2020 pandemi ve salgın hastalığın başlangıç yılında olduğu gibi hem bir önceki yılın ortalamasından hem de bir sonraki yılın ortalamasından daha düşük çıkan yıllar gözlemlenmektedir.
 
-Analize ait R kodları bu bölümde başlamalıdır. Bu bölümde veri setini R'a aktaran ve özet istatistikleri üreten kodlar yer almalıdır.
 
-```{r}
+```{r,echo=FALSE}
 library(tidyverse)
 library(here)
-survey <- read_csv(here("../data/survey.csv"))
+survey <- read_csv("https://raw.githubusercontent.com/MustafaEgemenVayvay/final/main/data/survey.csv")
 ```
 
-Rmd dosyasında kod bloklarının bazılarında kod seçeneklerinin düzenlendiğine dikkat edin. 
+ 
 
 ```{r, echo=FALSE}
 library(xtable) 
-# devtools::install_github("emraher/summarytools")
+# devtools::install_github("MustafaEgemenVayvay/summarytools")
 library(summarytools)
 st_options(lang = "tr")
 ```
 
-`echo=FALSE` seçeneği ile kodların türetilen pdf dosyasında görünmesini engelleyin ve sonuçlarınızı tablo halinde rapor edin.
+
 
 ```{r results='asis', echo=FALSE}
 survey %>%
-  select("sex", "credits", "handedness", "height", "handspan") %>% 
+  select("ikibinsekiz","ikibindokuz","ikibinon","ikibinonbir","ikibinoniki","ikibinonuc","ikibinondort","ikibinonbes","ikibinonalti","ikibinonyedi","ikibinonsekiz","ikibinondokuz","ikibinyirmi","ikibinyirmibir","ikibinyirmiiki" ) %>% 
   descr(stats = c("mean", "sd", "min", "med", "max"), transpose = TRUE) %>% 
   xtable(caption = "Özet İstatistikler",
          label = "tab:ozet",
@@ -93,33 +83,64 @@ survey %>%
 
 
 # Yöntem ve Veri Analizi
-Bu bölümde veri setindeki bilgileri kullanarak çalışmanın amacına ulaşmak için kullanılacak yöntemleri açıklayın. Derste işlenen/işlenecek olan analiz yöntemlerinden (Hipotez testleri ve korelasyon analizi gibi) çalışmanın amacına ve veri setine uygun olanlar bu bölümde kullanılmalıdır. [@newbold:2003; @ozsoy:2010; @ozsoy:2014]
-
-Örneğin, regresyon analizi gerçekleştiriyorsanız tahmin ettiğiniz denklemi bu bölümde tartışınız. Denklemlerinizi ve matematiksel ifadeleri $LaTeX$ kullanarak yazınız.
-
-$$
-Y_t = \beta_0 + \beta_N N_t + \beta_P P_t + \beta_I I_t + \varepsilon_t
-$$
-
-Bu bölümde analize ilişkin farklı tablolar ve grafiklere yer verilmelidir. Çalışmanıza uygun biçimde histogram, nokta grafiği (Şekil \@ref(fig:plot) gibi), kutu grafiği, vb. grafikleri bu bölüme ekleyiniz. Şekillerinize de gerekli göndermeleri bir önceki cümlede gösterildiği gibi yapınız.
 
 
-```{r plot, fig.align='center', fig.cap='Muhteşem Bir Grafik'}
+
+```{r plot, fig.align='center', fig.cap='2008-2009 Yılı karşılaştırması',echo=FALSE}
 survey %>% 
-  ggplot(aes(x = handedness, y = handspan)) +
+  ggplot(aes(x = ikibinsekiz, y = ikibindokuz)) +
   geom_point() +
   geom_smooth() +
-  scale_x_continuous("Handedness") + 
-  scale_y_continuous("Handspan")
+  scale_x_continuous("ikibinsekiz") + 
+  scale_y_continuous("ikibindokuz")
+```
+
+```{r,fig.align='center', fig.cap='2008-2010 Yılı karşılaştırması',echo=FALSE}
+ggplot(survey, aes(x=ikibinon, y=ikibinsekiz)) +
+  geom_line()
+```
+
+```{r,fig.align='center', fig.cap='2008 Yılı histogram tablosu', echo=FALSE}
+survey %>%
+  ggplot(aes(x = ikibinsekiz)) +
+  geom_histogram(aes(y = ..density..),
+                 colour = "black", 
+                 fill = "white") +
+  geom_density(alpha = 0.5, 
+               fill = "#71f653") 
+```
+
+```{r,fig.align='center', fig.cap='2019-2020 Yılı karşılaştırması', echo=FALSE}
+survey %>% 
+  select(ikibinondokuz, ikibinyirmi) %>% 
+  GGally::ggpairs()
+```
+
+```{r,fig.align='center', fig.cap='2019 YILI', echo=FALSE}
+ggplot(survey) +
+  aes(x =ikibinondokuz) +
+  geom_histogram()
+```
+
+```{r,fig.align='center', fig.cap='2020 YILI', echo=FALSE}
+ggplot(survey) +
+  aes(x =ikibinyirmi) +
+  geom_histogram()
+
+```
+
+```{r,fig.align='center', fig.cap='2021 YILI', echo=FALSE}
+ggplot(survey) +
+  aes(x =ikibinyirmibir) +
+  geom_histogram()
 ```
 
 
+
+
+
 # Sonuç
-Bu bölümde çalışmanızın sonuçlarını özetleyiniz. Sonuçlarınızın başlangıçta belirlediğiniz araştırma sorusuna ne derece cevap verdiğini ve ileride bu çalışmanın nasıl geliştirilebileceğini tartışınız.
 
-**Kaynakça bölümü Rmarkdown tarafından otomatik olarak oluşturulmaktadır. Taslak dosyada Kaynakça kısmında herhangi bir değişikliğe gerek yoktur.** 
-
-**_Taslakta bu cümleden sonra yer alan hiçbir şey silinmemelidir._**
 
 \newpage
 # Kaynakça {#references}
