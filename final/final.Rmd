@@ -134,10 +134,17 @@ ggplot(survey) +
   geom_histogram()
 ```
 
+```{r, echo=FALSE}
+survey %>%
+  filter(row_number() >= 5 & row_number() <= 8) %>%
+  ggplot(aes(x = ikibinondokuz, y = ikibinyirmi))+
+  geom_line()
+```
+
 
 # Sonuç
 
-Bu çalışmamızın sonucunda kullandığımız istatistiksel yöntemlerin desteği ile görmüş olduk ki Türkiye'de boşanma sayıları, bazı yıllarda yaşanılan önemli toplumsal olaylardan etkilenmektedir. 2020 Covid-19 salgını başta olmak üzere önemli toplumsal olaylarda boşanma hızları, nüfus artışıyla olan normal artış seyrinin dışına çıkmış ve genelde düşüş eğilimi göstermiştir. 2008 yılında yaşanan ve devamında etkileri hissedilen ekonomik kriz yıllarını incelediğimizde ve 2008-2009 yıllarını karşılaştırdığımızda ise biraz daha hissedilir biçimde boşanma sayılarında artış gözlemlenmiştir. Bu iki sonuca baktığımızda boşanma sayılarının seyrinin farklı yönlerde ilerlemesi, ekonomik krizin getirdiği işsizlik, geçim sıkıntısı gibi problemlerin boşanmalarda çok daha güçlü bir etken olduğu fakat salgın hastalık gibi dönemlerde artmadığı gibi kısıtlanan resmi işler, sokağa çıkma yasakları gibi etkenlerden dolayı yavaşlama göstermiştir. Genel olarak baktığımızda gerek düşme eğilimli gerek artma eğilimli olsun boşanma sayıları görüldüğü üzere yalnızca bireysel olaylardan değil, tüm ulusu etkileyen toplumsal olaylardan da fazlasıyla etkilenmektedir.
+Bu çalışmamızın sonucunda kullandığımız istatistiksel yöntemlerin desteği ile görmüş olduk ki Türkiye'de boşanma sayıları, bazı yıllarda yaşanılan önemli toplumsal olaylardan etkilenmektedir. 2020 Covid-19 salgını başta olmak üzere önemli toplumsal olaylarda boşanma hızları, nüfus artışıyla olan normal artış seyrinin dışına çıkmış ve genelde düşüş eğilimi göstermiştir. 2008 yılında yaşanan ve devamında etkileri hissedilen ekonomik kriz yıllarını incelediğimizde ve 2008-2009 yıllarını karşılaştırdığımızda ise biraz daha hissedilir biçimde boşanma sayılarında artış gözlemlenmiştir. Bu iki sonuca baktığımızda boşanma sayılarının seyrinin farklı yönlerde ilerlemesi, ekonomik krizin getirdiği işsizlik, geçim sıkıntısı gibi problemlerin boşanmalarda çok daha güçlü bir etken olduğu fakat salgın hastalık gibi dönemlerde artmadığı gibi kısıtlanan resmi işler, sokağa çıkma yasakları gibi etkenlerden dolayı yavaşlama göstermiştir. Bir diğer bakış açısından, bölgesel olarak baktığımızda ise örnek olarak Gaziantep ve Kocaeli illerine baktığımızda nüfus sayıları neredeyse aynı olmasına hatta Gaziantep'in nüfusunun biraz daha fazla olmasına rağmen Kocaeli'de boşanma sayıları daha fazla olmuştur. Bir diğer örnek Van ve Aydın illerine baktığımızda nüfusların hemen hemen aynı olduğunu gözlemlediğimiz halde, Aydın'da Van'a göre neredeyse 10 kat fazla bir boşanma sayısı ortaya çıkmaktadır. Genel olarak baktığımızda gerek düşme eğilimli gerek artma eğilimli olsun boşanma sayıları görüldüğü üzere yalnızca bireysel olaylardan değil, tüm ulusu etkileyen toplumsal olaylardan ve bölgesel, dolaylı olarak kültürlerden fazlasıyla etkilenmektedir.
 
 \newpage
 # Kaynakça {#references}
